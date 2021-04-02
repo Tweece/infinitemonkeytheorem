@@ -10,7 +10,7 @@ int checkChar(long lengthOfPhrase, char tab0[], char phrase[lengthOfPhrase+1], l
     if(tab0[pos+stage]==phrase[stage]) checkChar(lengthOfPhrase,tab0,phrase,pos,stage+1); // jezeli znaki z pozycji stage sa takie same to wykonujemy te funkcje ponownie z stage+1
   } else { // jezeli wszystkie znaki zostaly porownane
     printf("%ld\n", pos);
-    phrasePos[numOfPhrases]=pos; // zapis pozycji w ciagu
+    phrasePos[numOfPhrases]=pos; // zapis pozycji frazy w ciagu
     numOfPhrases++;
   }
   return 0;
@@ -30,7 +30,7 @@ int main() {
     printf("Memory allocation failed");
     return 1;
   }
-  char tab1[32]={"QDRWBJFUPASHTGYNEOIZXMCVKL ,.?!\0"}; //workman layout
+  char tab1[32]={"QDRWBJFUPASHTGYNEOIZXMCVKL ,.?!\0"}; // workman layout
   tab0[numOfChar]='\0';
   printf("Wpisz dlugosc wyszukiwanej frazy: ");
   scanf("%ld", &lengthOfPhrase); getchar();
