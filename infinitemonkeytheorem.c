@@ -44,8 +44,8 @@ int main() {
     tab0[i]=tab1[rand()%31]; // generacja randomowych znakow z tablicy tab1
     if(i>lengthOfPhrase&&numOfChar-i>lengthOfPhrase+1) { // sprawdzenie czy sprawdzajac liczby nie wyjdziemy poza tablice
       checkChar(lengthOfPhrase,tab0,phrase,i-lengthOfPhrase,0); // funkcja porownojaca
+      checkVar++;
     }
-    checkVar++;
   }
   printf("\nSprawdzono %ld znakow\n", checkVar);
   if(numOfPhrases==0) printf("Nie znaleziono zadnej frazy\n");
