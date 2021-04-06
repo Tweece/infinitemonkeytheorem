@@ -30,7 +30,7 @@ int main() {
     printf("Memory allocation failed");
     return 1;
   }
-  char tab1[32]={"QDRWBJFUPASHTGYNEOIZXMCVKL ,.?!\0"}; // workman layout
+  char tab1[32]={"QDRWBJFUPASHTGYNEOIZXMCVKL ,.?!\0"}; //workman layout
   tab0[numOfChar]='\0';
   printf("Wpisz dlugosc wyszukiwanej frazy: ");
   scanf("%ld", &lengthOfPhrase); getchar();
@@ -45,15 +45,17 @@ int main() {
     if(i>lengthOfPhrase&&numOfChar-i>lengthOfPhrase+1) { // sprawdzenie czy sprawdzajac liczby nie wyjdziemy poza tablice
       checkChar(lengthOfPhrase,tab0,phrase,i-lengthOfPhrase,0); // funkcja porownojaca
     }
+    checkVar++;
   }
-  printf("\n");
+  printf("\nSprawdzono %ld znakow\n", checkVar);
+  if(numOfPhrases==0) printf("Nie znaleziono zadnej frazy\n");
   while(!0) {
     printf("Wyszukiwanie poszczegolnych pozycji (aby opuscic program wpisz liczbe ujemna)\nPodaj pozycje startowa: ");
     scanf("%ld", &curPos); getchar();
     if (curPos<0) return 0;
     printf("Ile znakow po pozycji startowej ma byc pokazanych: ");
     scanf("%ld", &numOfCharToShow); getchar();
-    for(i=curPos;i<=(curPos+numOfCharToShow);i++) {
+    for(i=curPos;i<(curPos+numOfCharToShow);i++) {
       printf("%c", tab0[i]);
     }
     printf("\n");
