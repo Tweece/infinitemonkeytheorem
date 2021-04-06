@@ -18,7 +18,7 @@ int checkChar(long lengthOfPhrase, char tab0[], char phrase[lengthOfPhrase+1], l
 
 
 int main() {
-  long numOfChar,i,lengthOfPhrase, curPos, numOfCharToShow, checkVar=0;
+  long numOfChar,i,lengthOfPhrase, curPos, numOfCharToShow, checkVar=0, checkBAR=0;
   time_t t;
   srand((unsigned) time(&t));
   printf("Podaj liczbe znakow do wygenerowania(w 1000): ");
@@ -46,8 +46,9 @@ int main() {
       checkChar(lengthOfPhrase,tab0,phrase,i-lengthOfPhrase,0); // funkcja porownojaca
       checkVar++;
     }
+    CheckBAR++;
   }
-  printf("\nSprawdzono %ld znakow\n", checkVar);
+  printf("\nSprawdzono %ld znakow\nDebug:%ld\n\n", checkVar, checkBAR);
   if(numOfPhrases==0) printf("Nie znaleziono zadnej frazy\n");
   while(!0) {
     printf("Wyszukiwanie poszczegolnych pozycji (aby opuscic program wpisz liczbe ujemna)\nPodaj pozycje startowa: ");
