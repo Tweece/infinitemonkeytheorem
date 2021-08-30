@@ -19,7 +19,7 @@ int checkChar(long lengthOfPhrase, char tab0[], char phrase[lengthOfPhrase+1], l
 
 int main() {
   long numOfChar,i,lengthOfPhrase, curPos, numOfCharToShow, checkVar=0, checkBAR=0;
-  time_t t;
+  time_t t = 1000;
   srand((unsigned) time(&t));
   printf("Podaj liczbe znakow do wygenerowania(w 1000): ");
   scanf("%ld", &numOfChar);
